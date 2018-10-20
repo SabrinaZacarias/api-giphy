@@ -13,7 +13,7 @@ function erro(){
 function trazResultadoDaBusca(event){
   event.preventDefault();
   const respostaDaBusca = new XMLHttpRequest(); 
-  respostaDaBusca.open('GET', `http://api.giphy.com/v1/gifs/search?q=${buscaGif()}&api_key=yEz8I9ugzVZ6f2lTbwYt72dRQqYvs2dW&limit=10`)
+  respostaDaBusca.open('GET', `http://api.giphy.com/v1/gifs/search?q=${buscaGif()}&api_key=yEz8I9ugzVZ6f2lTbwYt72dRQqYvs2dW&`)
   respostaDaBusca.onload = carregaPostsComGifs;
   respostaDaBusca.onerror = erro;
   respostaDaBusca.send();
